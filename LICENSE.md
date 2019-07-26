@@ -25,7 +25,7 @@ is also under the Expat license.
 The compiled [xxHash](https://github.com/Cyan4973/xxHash) for the [XxHash.jl](https://github.com/hros/xxHash.jl) binaries are
 copyright © 2015, 2012-2014, Yann Collet, also under the FreeBSD License:
 
->Redistribution and use in source and binary forms, with or without >modification, are permitted provided that the following conditions are >met:
+>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 >
 >1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 >
