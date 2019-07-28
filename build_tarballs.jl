@@ -8,7 +8,7 @@ sources = [
 
 # Bash recipe for building across all platforms
 script = raw"""
-cd $WORKSPACE/
+cd $WORKSPACE/srcdir
 make
 """
 
