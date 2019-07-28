@@ -2,8 +2,8 @@ using BinaryBuilder
 
 # Collection of sources required to build Xsum
 sources = [
-    "https://github.com/Cyan4973/xxHash" =>
-    "810f9d209b65cc523c159ca96fddd614d890a5e2", # version 2019-03-15 "0.7"
+    "https://github.com/Cyan4973/xxHash/archive/v0.7.0.tar.gz" =>
+    "b34792646d5e19964bb7bba24f06cb13aecaac623ab91a54da08aa19d3686d7e", 
 ]
 
 # Bash recipe for building across all platforms
