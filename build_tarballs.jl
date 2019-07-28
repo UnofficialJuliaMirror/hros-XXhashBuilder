@@ -3,17 +3,13 @@ using BinaryBuilder
 # Collection of sources required to build Xsum
 sources = [
     "https://github.com/Cyan4973/xxHash/archive/v0.7.0.tar.gz" =>
-    "b34792646d5e19964bb7bba24f06cb13aecaac623ab91a54da08aa19d3686d7e", 
+    "b34792646d5e19964bb7bba24f06cb13aecaac623ab91a54da08aa19d3686d7e",
 ]
 
 # Bash recipe for building across all platforms
 script = raw"""
-cd $WORKSPACE/srcdir/xsum
-mkdir -p ${prefix}/lib
-if [[ $target == i686-* ]]; then
-    xxhashfpmath="-mfpmath=sse"
-fi
-${CC} ${LDFLAGS} -shared -fPIC -O3 -std=c99 ${xxhashfpmath} -fno-inline-functions -o ${prefix}/lib/libxxhash.${dlext} xxhash.c xxhashsum.c
+cd $WORKSPACE/
+make
 """
 
 # These are the platforms we will build for by default, unless further
