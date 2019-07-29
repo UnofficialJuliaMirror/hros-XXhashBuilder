@@ -18,7 +18,7 @@ platforms = supported_platforms() # build on all supported platforms
 
 # The products that we will ensure are always built
 products(prefix) = [
-    LibraryProduct(prefix, "libxxhash", :libxxhas),
+    LibraryProduct(prefix, "libxxhash", :libxxhash),
 ]
 
 # Dependencies that must be installed before this package can be built
