@@ -9,7 +9,10 @@ sources = [
 # Bash recipe for building across all platforms
 script = raw"""
 cd $WORKSPACE/srcdir/xxHash-0.7.0
+ls
+echo "about to execute make"
 make
+echo "after make"
 """
 
 # These are the platforms we will build for by default, unless further
