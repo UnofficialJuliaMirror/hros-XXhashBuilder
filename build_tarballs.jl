@@ -11,14 +11,14 @@ script = raw"""
 cd $WORKSPACE/srcdir/xxHash-0.7.0
 mkdir -p ${prefix}/lib
 make
-if [[ "$(uname)" == 'Darwin' ]]
-then
-    SHARED_EXT = dylib
-else
-    SHARED_EXT = so
-fi
-cp libxxhash.$(SHARED_EXT) ${prefix}/lib/libxsum.${dlext}
+cp libxxhash.${dlext} ${prefix}/lib/libxxhash.${dlext}
 """
+# if [[ "$(uname)" == 'Darwin' ]]
+# then
+#     cp libxxhash.dylib ${prefix}/lib/libxxhash.${dlext}
+# else
+#     cp libxxhash.so ${prefix}/lib/libxxhash.${dlext}
+# fi
 
 # These are the platforms we will build for by default, unless further
 # platforms are passed in on the command line
