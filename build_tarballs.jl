@@ -11,11 +11,12 @@ script = raw"""
 cd $WORKSPACE/srcdir/xxHash-0.7.0
 mkdir -p ${prefix}/lib
 make
-ifeq ($(shell uname), Darwin)
-	SHARED_EXT = dylib
+if [[ "$(uname)" == 'Darwin' ]]
+then
+    SHARED_EXT = dylib
 else
-	SHARED_EXT = so
-endif
+    SHARED_EXT = so
+fi
 cp libxxhash.$(SHARED_EXT) ${prefix}/lib/libxsum.${dlext}
 """
 
