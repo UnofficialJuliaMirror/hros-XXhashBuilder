@@ -11,7 +11,10 @@ script = raw"""
 cd $WORKSPACE/srcdir/xxHash-0.7.0
 mkdir -p ${prefix}/lib
 make
-cp libxxhash.${dlext} ${prefix}/lib/libxxhash.${dlext}
+if [ "$dlext" == "dylib" ] || [ "$dlext" == "so" ]
+then
+    cp libxxhash.${dlext} ${prefix}/lib/libxxhash.${dlext}
+fi
 """
 # if [[ "$(uname)" == 'Darwin' ]]
 # then
