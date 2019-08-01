@@ -11,8 +11,10 @@ script = raw"""
 cd $WORKSPACE/srcdir/xxHash-0.7.0
 mkdir -p ${prefix}/lib
 make
-if [ "$dlext" == "dylib" ] || [ "$dlext" == "so" ]
+if [ $target = "x86_64-w64-mingw32" ] || [ $target = "i686-w64-mingw32" ]
 then
+    cp libxxhash.so ${prefix}/lib/libxxhash.so
+else
     cp libxxhash.${dlext} ${prefix}/lib/libxxhash.${dlext}
 fi
 """
