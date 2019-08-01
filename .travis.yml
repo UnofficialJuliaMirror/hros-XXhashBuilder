@@ -30,5 +30,5 @@ deploy:
   file: products/*
   skip_cleanup: true
   on:
-    repo: hros/xxHashBuilder
+    repo: hros/XXhashBuilder
     tags: true
